@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Biscoito from './Biscoito';
+import Integrantes from './Integrantes';
 import './App.css';
 
-function App() {
+export default function App() {
+  const [tela, setTela] = useState('home');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Biscoito da Sorte</h1>
+
+      <nav>
+        <button onClick={() => setTela('biscoito')}>Biscoito</button>
+        <button onClick={() => setTela('integrantes')}>Integrantes</button>
+      </nav>
+
+      {tela === 'home' && <p>Bem-vindo ao Biscoito da Sorte!</p>}
+      {tela === 'biscoito' && <Biscoito />}
+      {tela === 'integrantes' && <Integrantes />}
     </div>
   );
 }
-

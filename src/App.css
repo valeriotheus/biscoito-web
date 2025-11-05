@@ -1,38 +1,102 @@
-.App {
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f8f4f0;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #d2691e;
+  margin-top: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  margin: 20px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav button {
+  background-color: #d2691e;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+nav button:hover:not(:disabled) {
+  background-color: #ff7f50;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.biscoito-container img {
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+.biscoito-container img.aberto {
+  width: 300px;
+}
+
+.biscoito-container button {
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.biscoito-container button:hover:not(:disabled) {
+  background-color: #e76f51;
+}
+
+.biscoito-container button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.biscoito-container p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a2a2a;
+  margin-top: 15px;
+}
+
+.integrantes-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.integrante {
+  text-align: center;
+}
+
+.integrante img {
+  width: 150px;
+  border-radius: 75px;
+  transition: transform 0.3s ease;
+}
+
+.integrante img:hover {
+  transform: scale(1.1);
+}
+
+.integrante p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #4b2e2e;
 }
